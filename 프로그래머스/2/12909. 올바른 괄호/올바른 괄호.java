@@ -6,23 +6,22 @@ class Solution {
         
         if(s.charAt(start)==')' || s.charAt(end)=='('){
             return false;
-        }else{
-            
-            int left = 0;
-            int right = 0;
-            for(int i=0;i<s.length();i++){
-                if(s.charAt(i)=='('){
-                    left += 1;
-                }else right += 1;
-                if(left-right<0){
-                    return false;
-                }
-            }
-
-            if(left!=right){
-                return false;
-            }else return true;
         }
+            
+        int left = 0;
+        int right = 0;
+        for(int i=0;i<s.length();i++){
+            if(s.charAt(i)=='('){
+                left += 1;
+            }else right += 1;
+            if(left-right<0){
+                return false;
+            }
+        }
+
+        if(left!=right){
+            return false;
+        }else return true;
 
     }
 }
